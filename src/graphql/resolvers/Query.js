@@ -1,6 +1,8 @@
 
 const Query = {
-    ping: () => "pong"
+    allUsers: async (parent, args, {models}) => await models.User.find(),
+
+    getUser: async (parent, args, {models}) => await models.User.findOne(args)
 
 }
 

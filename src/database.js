@@ -2,7 +2,8 @@ import mongoose from 'mongoose'
 
 mongoose.connect("mongodb://localhost/instagram-clone", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 })
     .then(db => console.log("Database is connected"))
     .catch(err => console.log(err));
